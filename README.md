@@ -58,30 +58,24 @@ Como cliente quiero realizar el pago de mi turno mediante Nequi, PSE, Stripe o E
 * Implementar los adaptadores para Nequi, PSE, Stripe y Efectivo aplicando las reglas de simulación de cada proveedor.
 * Desarrollar el servicio que recibe la solicitud de pago del turno y la delega al adaptador correspondiente.
 
-## Punto 6)
-### Chain of responsability
-- Tipo: Comportamiento
 
-- Justificacion: Este patron es util, ya que, necesitamos pasar solicitudes a lo largo de una cadena de barberos y, al recibir una solicitud,
-  se debe decidir si este debe atender al cliente o tiene que delegarle la tarea al siguiente
+## Punto 6: Patrones de Diseño
 
-- Diagrama de clases:
-
-- SOLID: Open/Closed, ya que, al crear handlers, se garantiza que el codigo se puede extender y no es necesario modificar cada implementacion concreta al agregar otra categoria o otra funcionalidad
-Dependency Inversion, ya que las dependencias estan en las abstracciones y no en los detalles de la implementacion
+### Chain of Responsibility
+* Tipo: Comportamiento
+* Justificación: Es útil porque cada turno debe pasar por una serie de 5 validaciones obligatorias y ordenadas antes de confirmarse. Si alguna falla, detiene el proceso de inmediato sin acoplar las validaciones entre sí.
+* SOLID aplicados:
+  * Open/Closed Principle: Permite agregar nuevos pasos de validación creando nuevos manejadores sin modificar el flujo principal del sistema.
+  * Single Responsibility Principle: Cada clase validadora se encarga únicamente de revisar una regla específica del turno.
+  * Dependency Inversion Principle: Los manejadores y el cliente dependen de una abstracción base y no de las validaciones concretas.
 
 ### Adapter
-
-- Tipo: Estructural
-
-- Justificacion: Este patron es util, ya que nos dicen que las 4 pasarelas de pago tienen interfaces incompatibles, de esta manera, podemos crear una clase intermedia que sirva como traductora.
-
-- Diagrama de clases:
-
-- SOLID: 
-Open/Closed, ya que se puede introducir nuevos tipos de adaptadores al programa sin descomponer el codigo existente
-
-SRP, ya que se puede separar la interfaz o el codigo que hace la conversion de datos de la logica de negocio
+* Tipo: Estructural
+* Justificación: Es útil porque las cuatro pasarelas de pago tienen métodos y respuestas totalmente incompatibles entre sí. El adaptador actúa como traductor para unificar todas las respuestas a un formato común (payment_Id, estado, mensaje).
+* SOLID aplicados:
+  * Open/Closed Principle: Se pueden integrar nuevas pasarelas de pago agregando un nuevo adaptador sin alterar el código existente del sistema.
+  * Single Responsibility Principle: Separa la lógica de conversión y comunicación externa de la lógica de negocio principal de la barbería.
+  * Dependency Inversion Principle: La barbería depende de una interfaz general de procesamiento de pagos y no de las librerías o implementaciones directas de cada pasarela.
 
 
 -----------------------------------------

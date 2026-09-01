@@ -44,7 +44,19 @@ para poder corregir dicha información al solicitar nuevamente el servicio
 ## Punto 5)
 
 
+### Épica
+Sistema de procesamiento y normalización de pagos multicanal para Bob's Barber
 
+### Feature
+Integración de pasarelas de pago heterogéneas mediante adaptadores normalizados
+
+### Historia de Usuario
+Como cliente quiero realizar el pago de mi turno mediante Nequi, PSE, Stripe o Efectivo para confirmar mi reserva según mi método de pago de preferencia.
+
+### Tareas
+* Definir la interfaz común de pago y el modelo unificado de respuesta con los campos payment_Id, estado y mensaje.
+* Implementar los adaptadores para Nequi, PSE, Stripe y Efectivo aplicando las reglas de simulación de cada proveedor.
+* Desarrollar el servicio que recibe la solicitud de pago del turno y la delega al adaptador correspondiente.
 
 ## Punto 6)
 ### Chain of responsability

@@ -6,7 +6,7 @@ URL BITACORA: https://github.com/Carlossj8/DOSW_BITACORA.git
 
 
 ## Punto 1) diagrama de contexto
-![img_3.png](docs%2Fimages%2Fimg_3.png)
+![img_3.png](docs/images/img_3.png)
 
 
 

@@ -25,12 +25,11 @@ URL BITACORA: https://github.com/Carlossj8/DOSW_BITACORA.git
 ## Punto 3) diagrama de casos de uso
 
 
-![img_4.png](docs%2Fimages%2Fimg_4.png)
+![img_4.png](docs/images/img_4.png)
 
-Como Cliente quiero escoger la pasarela de pago para realizar el pago según mis posiblidades o comodidades
+Como cliente,quiero realizar el pago de mi turno usando diferentes medios, para cancelar el valor del servicio según mi comodidad y preferencia.
 
-
-![img_5.png](docs%2Fimages%2Fimg_5.png)
+![img_5.png](docs/images/img_5.png)
 
 Como cliente quiero Ser informado del motivo especifico de rechazo cuando una validacion falla
 para poder corregir dicha información al solicitar nuevamente el servicio

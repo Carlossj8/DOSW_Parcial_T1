@@ -36,7 +36,41 @@ Como cliente quiero Ser informado del motivo especifico de rechazo cuando una va
 para poder corregir dicha información al solicitar nuevamente el servicio
 
 
+## Punto 4)
 
+
+
+
+
+## Punto 5)
+
+
+
+
+## Punto 6)
+### Chain of responsability
+- Tipo: Comportamiento
+
+- Justificacion: Este patron es util, ya que, necesitamos pasar solicitudes a lo largo de una cadena de barberos y, al recibir una solicitud,
+  se debe decidir si este debe atender al cliente o tiene que delegarle la tarea al siguiente
+
+- Diagrama de clases:
+
+- SOLID: Open/Closed, ya que, al crear handlers, se garantiza que el codigo se puede extender y no es necesario modificar cada implementacion concreta al agregar otra categoria o otra funcionalidad
+Dependency Inversion, ya que las dependencias estan en las abstracciones y no en los detalles de la implementacion
+
+### Adapter
+
+- Tipo: Estructural
+
+- Justificacion: Este patron es util, ya que nos dicen que las 4 pasarelas de pago tienen interfaces incompatibles, de esta manera, podemos crear una clase intermedia que sirva como traductora.
+
+- Diagrama de clases:
+
+- SOLID: 
+Open/Closed, ya que se puede introducir nuevos tipos de adaptadores al programa sin descomponer el codigo existente
+
+SRP, ya que se puede separar la interfaz o el codigo que hace la conversion de datos de la logica de negocio
 
 
 -----------------------------------------

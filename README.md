@@ -22,6 +22,20 @@ URL BITACORA: https://github.com/Carlossj8/DOSW_BITACORA.git
 - Estar disponible con un porcentaje de 99.5% en horario de operación (lunes a domingo)
 - Procesar un turno en ≤ 2 s para el 95% de las solicitudes
 
+## Punto 3) diagrama de casos de uso
+
+
+![img_4.png](docs%2Fimages%2Fimg_4.png)
+
+Como Cliente quiero escoger la pasarela de pago para realizar el pago según mis posiblidades o comodidades
+
+
+![img_5.png](docs%2Fimages%2Fimg_5.png)
+
+Como cliente quiero Ser informado del motivo especifico de rechazo cuando una validacion falla
+para poder corregir dicha información al solicitar nuevamente el servicio
+
+
 
 
 

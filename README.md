@@ -77,8 +77,17 @@ Como cliente quiero realizar el pago de mi turno mediante Nequi, PSE, Stripe o E
   * Single Responsibility Principle: Separa la lógica de conversión y comunicación externa de la lógica de negocio principal de la barbería.
   * Dependency Inversion Principle: La barbería depende de una interfaz general de procesamiento de pagos y no de las librerías o implementaciones directas de cada pasarela.
 
+## Evidencias ejecucion codigo
+
+![img_6.png](docs/images/img_6.png)
+
+![img_7.png](docs/images/img_7.png)
+
+
 
 -----------------------------------------
+
+## Prerrequisitos
 
 ![img.png](docs/images/img.png)
 
